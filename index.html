@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PacMan</title>
+    <style>
+        .cell{
+            position: absolute;
+        }
+        .food{
+            background-color: white;
+            border-radius: 50%;
+            animation: foodAni 1s linear infinite;
+        }
+        .player{
+            background-color: yellow;
+        }
+        .opponent{
+            background-color: red;
+        }
+        .fear{
+            opacity: 0.4;
+            background-color: white;
+        }
+        @keyframes foodAni {
+            50%{
+                opacity: 0.8;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .food,.player,.opponent,#notice,#message{
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #score{
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 2.5vw;
+        }
+        #notice{
+            text-align: center;
+            border-radius: 0%;
+            background-color: peachpuff;
+            width: 25vw;
+            color: black;
+            font-weight: bold;
+            font-size: 3vw;
+            visibility: hidden;
+        }
+        #message{
+            border-radius: 0%;
+        }
+        #control{
+            position: absolute;
+            left: 48vw;
+            top: 44vw;
+        }
+        .btn{
+            height: 4.5vw;
+            width: 4.5vw;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="PlayArea"></div>
+<div id="score"></div>
+<div id="notice"></div>
+<div id="control">
+    <button class="btn" onclick="pac.changeDir([-1,0])">U</button><br/>
+    <button class="btn" onclick="pac.changeDir([0,-1])" style="transform: translateX(-160%)">L</button>
+    <button class="btn" onclick="pac.changeDir([0,1])" style="transform: translateX(50%)">R</button><br/>
+    <button class="btn" onclick="pac.changeDir([1,0])">D</button>
+</div>
+<script src="support.js"></script>
+<script src="packman.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
