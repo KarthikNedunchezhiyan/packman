@@ -65,12 +65,15 @@
         #control{
             position: absolute;
             left: 48vw;
-            top: 44vw;
+            top: 60vw;
         }
         .btn{
             height: 4.5vw;
             width: 4.5vw;
             border-radius: 50%;
+        }
+        body{
+            overflow: hidden;
         }
     </style>
 </head>
@@ -80,10 +83,10 @@
 <div id="score"></div>
 <div id="notice"></div>
 <div id="control">
-    <button class="btn" onclick="pac.changeDir([-1,0])">U</button><br/>
-    <button class="btn" onclick="pac.changeDir([0,-1])" style="transform: translateX(-160%)">L</button>
-    <button class="btn" onclick="pac.changeDir([0,1])" style="transform: translateX(50%)">R</button><br/>
-    <button class="btn" onclick="pac.changeDir([1,0])">D</button>
+    <button class="btn" onclick="pac.changeDir([-1,0])" style="transform: translateY(-150%)">U</button><br/>
+    <button class="btn" onclick="pac.changeDir([0,-1])" style="transform: translateX(-660%)">L</button>
+    <button class="btn" onclick="pac.changeDir([0,1])" style="transform: translateX(550%)">R</button><br/>
+    <button class="btn" onclick="pac.changeDir([1,0])" style="transform: translateY(150%)">D</button>
 </div>
 <script src="support.js"></script>
 <script src="packman.js"></script>

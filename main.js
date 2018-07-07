@@ -17,3 +17,7 @@ window.onkeyup = function(e) {
         pac.changeDir([0,1]);
     }
 };
+
+if (typeof window.orientation == 'undefined') {
+    document.getElementById("control").innerText="";
+}
